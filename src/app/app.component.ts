@@ -37,7 +37,7 @@ export class AppComponent {
       'profile': { 'essential': false }
     };
     options.pkce = true; // SDK generates a `code_verifier` and `code_challenge`
-    _window.amazon.Login.authorize(options, 'http://localhost:4500');
+    _window.amazon.Login.authorize(options, 'https://login-with-amazon.netlify.app');
 
     return false;
   }
