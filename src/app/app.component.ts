@@ -37,7 +37,7 @@ export class AppComponent {
     localStorage.setItem('lwa-client-id', this.clientID);
     _window.amazon.Login.setRegion('EU');
 
-    options.scope = 'advertising::campaign_management profile';
+    options.scope = 'advertising%3A%3Acampaign_management profile';
     options.scope_data = {
       'profile': { 'essential': false }
     };
