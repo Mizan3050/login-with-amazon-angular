@@ -41,7 +41,8 @@ export class AppComponent {
     options.scope_data = {
       'profile': { 'essential': false }
     };
-    options.pkce = true; // SDK generates a `code_verifier` and `code_challenge`
+    /*     options.pkce = true; // SDK generates a `code_verifier` and `code_challenge` */
+    options.response_type = 'code'
     _window.amazon.Login.authorize(options, 'https://login-with-amazon.netlify.app');
 
     return false;
