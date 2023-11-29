@@ -1,4 +1,20 @@
-<a id="LoginWithAmazon" (click)="handleLogin()">
+<input
+  type="text"
+  name=""
+  id=""
+  placeholder="Enter Client Id"
+  [(ngModel)]="clientID"
+/>
+<br />
+<br />
+<button (click)="setClientId()">Submit</button>
+<br />
+<br />
+<a
+  id="LoginWithAmazon"
+  (click)="handleLogin()"
+  *ngIf="showLoginWithAmazonButton"
+>
   <img
     border="0"
     alt="Login with Amazon"
@@ -7,5 +23,5 @@
     height="32"
   />
 </a>
-<br>
+<br />
 {{ code | async }}
