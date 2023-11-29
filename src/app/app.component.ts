@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, pluck, tap } from 'rxjs';
-declare const amazon: any; // Import the Amazon SDK
+import { map } from 'rxjs';
+
+const CLIENT_ID = 'amzn1.application-oa2-client.47ebe1da0ee6442d9b8846e4fe110e40';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -29,7 +31,7 @@ export class AppComponent {
     const options: any = {}
     options.scope = 'profile';
     const _window = window as any;
-    _window.amazon.Login.setClientId('amzn1.application-oa2-client.1432decfe00b477c878ce7a90c339500');
+    _window.amazon.Login.setClientId(CLIENT_ID);
     _window.amazon.Login.setRegion('EU');
 
     options.scope = 'advertising::campaign_management profile';
