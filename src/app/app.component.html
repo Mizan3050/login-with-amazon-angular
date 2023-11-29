@@ -5,16 +5,10 @@
   placeholder="Enter Client Id"
   [(ngModel)]="clientID"
 />
+<button (click)="clientID = ''">Reset</button>
 <br />
 <br />
-<button (click)="setClientId()">Submit</button>
-<br />
-<br />
-<a
-  id="LoginWithAmazon"
-  (click)="handleLogin()"
-  *ngIf="showLoginWithAmazonButton"
->
+<a id="LoginWithAmazon" (click)="handleLogin()" *ngIf="clientID.length">
   <img
     border="0"
     alt="Login with Amazon"
