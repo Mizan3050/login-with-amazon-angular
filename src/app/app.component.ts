@@ -23,7 +23,14 @@ export class AppComponent {
   get code() {
     return this.route.queryParams.pipe(
       map((params: any) => {
-        return params?.code
+        return params?.spapi_oauth_code
+      })
+    )
+  }
+  get selling_partner_id() {
+    return this.route.queryParams.pipe(
+      map((params: any) => {
+        return params?.selling_partner_id
       })
     )
   }
