@@ -1,4 +1,4 @@
-<input
+<!-- <input
   type="text"
   name=""
   id=""
@@ -18,4 +18,18 @@
   />
 </a>
 <br />
-{{ code | async }}
+{{ code | async }} -->
+
+<a
+id="LoginWithAmazon"
+class="amazon-login-button clickable"
+href="https://sellercentral.amazon.in/apps/authorize/consent?application_id=amzn1.sp.solution.915754bc-04ae-42b5-bb28-47cb5f11ebdc&version=beta&redirect_uri=https://login-with-amazon.netlify.app"
+target="_blank"
+>
+<img
+  [src]="
+    'https://assets.hyperinvento.com/www_hyperads_com/assets/images/amazon-button-image-1.svg'
+  "
+  alt="Login with Amazon"
+/>
+</a>
